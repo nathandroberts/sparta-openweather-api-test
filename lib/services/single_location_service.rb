@@ -4,7 +4,11 @@ require "json"
 class SingleLocationService
   include HTTParty
 
-  attr_accessor
+  attr_accessor :single_weather_data
+
+  def initialize
+    @single_weather_data = nil
+  end
 
   base_uri 'http://samples.openweathermap.org/data/2.5'
 
@@ -116,12 +120,20 @@ class SingleLocationService
     @single_weather_data["cod"]
   end
 
+  def random_city
+    @json_file = JSON.parse(File.read('country_data.json'))
+    @random = rand(@json_file.length - 1)
+    "#{@json_file[@random]['CapitalName']}"
+  end
+  def random_country
+    "#{@json_file[@random]['CountryCode']}"
+  end
+
+
 end
 x = SingleLocationService.new
-p '------------------------------------------------------------'
-p x.get_single_weather('london','uk')
-p '------------------------------------------------------------'
-# p x.get_single_weather('london','uk')['weather']
 # p '------------------------------------------------------------'
-# p x.get_single_weather('london','uk')['weather'][0]["main"]
+p x.get_single_weather(x.random_city,x.random_country)
 # p '------------------------------------------------------------'
+p x.random_city
+p x.random_country
