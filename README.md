@@ -4,9 +4,13 @@ Integration tests created for the openweather api. A service object model was cr
 ### Terminal commands to set up rspec
 ` gem install rspec`
 
-` From the root folder: rspec --init`
+From the root folder:
 
- `After tests are created: rspec`
+`  rspec --init`
+
+After tests are created: 
+
+ `rspec`
 
 ### Terminal commands to set up httparty and json
 ` gem install httparty`
