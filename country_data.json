@@ -1808,14 +1808,6 @@
     "ContinentName":"Asia"
   },
   {
-    "CountryName":"United Kingdom",
-    "CapitalName":"London",
-    "CapitalLatitude":"51.5",
-    "CapitalLongitude":"-0.083333",
-    "CountryCode":"GB",
-    "ContinentName":"Europe"
-  },
-  {
     "CountryName":"United States",
     "CapitalName":"Washington D.C.",
     "CapitalLatitude":"38.883333",

@@ -8,15 +8,8 @@ class CurrentWeather
     SingleLocationService.new
   end
 
-  # def initialize
-  #   @json_file = JSON.parse(File.read('country_data.json'))
-  # end
-
-
 
   def multiple_location_service
 
   end
 end
-
-# run = CurrentWeather.new

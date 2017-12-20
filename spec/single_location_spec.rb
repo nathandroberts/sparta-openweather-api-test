@@ -4,7 +4,9 @@ describe CurrentWeather do
 
   before(:all) do
     @openweather = CurrentWeather.new.single_location_service
-    @openweather.get_single_weather('london','uk')
+    # country_input= @openweather.random_country
+    # city_input= @openweather.random_city
+    @openweather.get_single_weather('london', 'uk')
   end
 
   it "should return a float for lon" do
